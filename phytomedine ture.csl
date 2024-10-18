@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="citation-style" version="1.0">
+  <info>
+    <title>Custom Journal Style</title>
+    <id>http://www.zotero.org/styles/custom-journal-style</id>
+    <link href="http://www.zotero.org/styles/custom-journal-style" rel="self"/>
+    <author>
+      <name>Your Name</name>
+      <email>your.email@example.com</email>
+    </author>
+    <category citation-format="author-date"/>
+    <updated>2024-10-18T00:00:00+00:00</updated>
+  </info>
+
+  <macro name="author">
+    <names variable="author">
+      <name form="long" delimiter=", " and="symbol" initialize-with="."/>
+      <label form="short" prefix=", "/>
+    </names>
+  </macro>
+
+  <macro name="issued">
+    <date variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+
+  <macro name="title">
+    <text variable="title" quotes="false"/>
+  </macro>
+
+  <macro name="container-title">
+    <text variable="container-title" form="short" font-style="normal"/>
+  </macro>
+
+  <macro name="volume">
+    <group delimiter=" ">
+      <text variable="volume"/>
+      <group prefix="(" suffix=")">
+        <text variable="issue"/>
+      </group>
+    </group>
+  </macro>
+
+  <macro name="page">
+    <text variable="page" prefix=", " suffix="."/>
+  </macro>
+
+  <citation>
+    <layout prefix="" suffix=".">
+      <text macro="author" suffix=", "/>
+      <text macro="issued" suffix=". "/>
+      <text macro="title" suffix=". "/>
+      <text macro="container-title" suffix=" "/>
+      <text macro="volume"/>
+      <text macro="page"/>
+    </layout>
+  </citation>
+
+  <bibliography>
+    <layout hanging-indent="true">
+      <text macro="author" suffix=", "/>
+      <text macro="issued" suffix=". "/>
+      <text macro="title" suffix=". "/>
+      <text macro="container-title" suffix=" "/>
+      <text macro="volume"/>
+      <text macro="page"/>
+    </layout>
+  </bibliography>
+</style>
